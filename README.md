@@ -42,10 +42,10 @@ Your submission **must** include all of the following:
 
 ### **1. README.md (Required Format)**
 Your README must clearly explain your project and follow this exact structure:
-Name of the domain:
-The Problem:
-Target Users:
-How your solution addresses it:
+- Name of the domain:
+- The Problem:
+- Target Users:
+- How your solution addresses it:
 
 
 ### **2. AI-Powered Feature (At least ONE required)**  
