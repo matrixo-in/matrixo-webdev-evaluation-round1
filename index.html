@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartLife Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="firebase.js"></script>
+  <script src="translate.js"></script>
+  <script src="profile.js"></script>
+  <script src="ai.js"></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <img src="assets/logo.png" class="logo">
+    <h1 data-translate="title">SmartLife Assistant</h1>
+
+    <button id="loginBtn">Login with Google</button>
+    <button id="logoutBtn" style="display:none;">Logout</button>
+
+    <select id="languageSwitcher">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="te">Telugu</option>
+    </select>
+  </header>
+
+  <section id="profileSection">
+    <h2 data-translate="profile">Profile Customization</h2>
+    <label>Name:</label>
+    <input id="userName" placeholder="Enter name">
+
+    <label>Avatar URL:</label>
+    <input id="avatarUrl" placeholder="Paste image link">
+
+    <label>Theme:</label>
+    <select id="themeSelector">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+
+    <button onclick="saveProfile()" data-translate="save">Save</button>
+  </section>
+
+  <section id="aiSection">
+    <h2 data-translate="summarizer">AI Text Summarizer</h2>
+    <textarea id="inputText" placeholder="Enter text"></textarea>
+    <button onclick="summarize()" data-translate="summarize">Summarize</button>
+    <p id="outputText"></p>
+  </section>
+
+</body>
+</html>
