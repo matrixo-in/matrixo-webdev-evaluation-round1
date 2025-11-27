@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 25% 97%;
+    --foreground: 230 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 20% 15%;
+
+    --primary: 200 85% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 50% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 92%;
+    --muted-foreground: 230 10% 45%;
+
+    --accent: 175 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 200 85% 45%;
+
+    --radius: 1rem;
+
+    /* Wellness-specific tokens */
+    --calm-gradient-start: 200 85% 55%;
+    --calm-gradient-mid: 240 70% 60%;
+    --calm-gradient-end: 280 60% 65%;
+    
+    --zen-shadow: 0 0% 85%;
+    --tranquil: 195 60% 92%;
+    --serene: 240 55% 95%;
+    --peaceful: 175 45% 90%;
+    
+    --mood-happy: 45 95% 65%;
+    --mood-calm: 175 60% 55%;
+    --mood-neutral: 220 20% 70%;
+    --mood-sad: 240 50% 60%;
+    --mood-anxious: 15 85% 65%;
+  }
+
+  .dark {
+    --background: 230 25% 8%;
+    --foreground: 220 20% 92%;
+
+    --card: 230 20% 12%;
+    --card-foreground: 220 20% 92%;
+
+    --popover: 230 20% 12%;
+    --popover-foreground: 220 20% 92%;
+
+    --primary: 200 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 50% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 15% 18%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 175 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 15% 18%;
+    --input: 230 15% 18%;
+    --ring: 200 85% 55%;
+    
+    --calm-gradient-start: 200 75% 45%;
+    --calm-gradient-mid: 240 60% 50%;
+    --calm-gradient-end: 280 50% 55%;
+    
+    --zen-shadow: 0 0% 5%;
+    --tranquil: 195 50% 15%;
+    --serene: 240 45% 18%;
+    --peaceful: 175 35% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer utilities {
+  .gradient-calm {
+    background: linear-gradient(135deg, hsl(var(--calm-gradient-start)), hsl(var(--calm-gradient-mid)), hsl(var(--calm-gradient-end)));
+  }
+  
+  .gradient-tranquil {
+    background: linear-gradient(180deg, hsl(var(--tranquil)), hsl(var(--serene)));
+  }
+  
+  .shadow-zen {
+    box-shadow: 0 10px 40px -10px hsl(var(--zen-shadow));
+  }
+  
+  .shadow-peaceful {
+    box-shadow: 0 4px 20px -4px hsl(var(--zen-shadow));
+  }
+  
+  .animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+  
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
