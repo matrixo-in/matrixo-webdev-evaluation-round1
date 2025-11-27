@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Student Productivity App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/openai@4.0.0/dist/index.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>TaskMaster</h1>
+            <div id="user-info">
+                <button id="login-btn">Login with Google</button>
+                <div id="user-profile" style="display: none;">
+                    <img id="user-avatar" src="" alt="Avatar">
+                    <span id="user-name"></span>
+                    <button id="profile-btn">Profile</button>
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </div>
+            <div id="language-selector">
+                <button onclick="setLanguage('en')">English</button>
+                <button onclick="setLanguage('hi')">हिंदी</button>
+                <button onclick="setLanguage('te')">తెలుగు</button>
+            </div>
+        </header>
+        <main>
+            <section id="tasks">
+                <h2 data-lang="tasks">Tasks</h2>
+                <input type="text" id="task-input" placeholder="Add a new task" data-lang="add-task">
+                <button id="add-task-btn" data-lang="add">Add</button>
+                <ul id="task-list"></ul>
+            </section>
+            <section id="ai-recommendations">
+                <h2 data-lang="ai-recommendations">AI Recommendations</h2>
+                <p id="ai-text"></p>
+                <button id="get-ai-btn" data-lang="get-recommendations">Get Recommendations</button>
+            </section>
+        </main>
+        <div id="profile-modal" style="display: none;">
+            <h3 data-lang="profile">Profile</h3>
+            <input type="text" id="profile-name" placeholder="Name">
+            <input type="file" id="profile-avatar">
+            <select id="theme-selector">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+            <button id="save-profile-btn" data-lang="save">Save</button>
+            <button onclick="closeProfile()">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
