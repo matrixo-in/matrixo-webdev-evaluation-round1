@@ -1,5 +1,4 @@
-<div align="center">
-    <img src="https://matrixo.in/logos/logo-dark.png" width="30%" alt="matriXO Logo Dark"/>
+<img src="https://matrixo.in/logos/logo-dark.png" width="30%" alt="matriXO Logo Dark"/>
 </div>
 <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Developer Animation"/>
 
@@ -120,3 +119,41 @@ For any queries, contact:
 
 ### **Good luck, and happy building!**
 ### **– Team matriXO**
+=======
+# TaskMaster - Student Productivity App
+
+## Project Description
+
+Name of the domain: Productivity
+
+The Problem: Students often struggle with managing multiple tasks, deadlines, and study schedules, leading to stress, missed assignments, and poor time management.
+
+Target Users: Students (high school, college, and university levels) who need better organization and productivity tools.
+
+How your solution addresses it: TaskMaster provides a simple, intuitive web app for task management with AI-powered recommendations to help prioritize tasks, Google login for secure access, profile customization for personalization, and multi-language support (English, Hindi, Telugu) to cater to diverse users.
+
+## Features
+
+- **Task Management**: Add, view, and delete tasks with local storage persistence.
+- **AI-Powered Recommendations**: Uses OpenAI API to provide productivity tips based on current tasks.
+- **Google Login**: Secure authentication via Firebase.
+- **Profile Customization**: Users can set name, avatar, and choose light/dark theme.
+- **Multi-Language Support**: Translation to Hindi and Telugu in addition to English.
+
+## Technologies Used
+
+- HTML5, CSS3, JavaScript (ES6+)
+- Firebase Authentication for Google Login
+- OpenAI API for AI recommendations
+- Local Storage for data persistence
+
+## Setup Instructions
+
+1. Clone the repository
+2. Open `index.html` in a web browser
+3. Configure Firebase and OpenAI API keys in `script.js`
+4. The app is ready to use!
+
+## Note
+
+This is a client-side only application. For production use, API keys should be handled securely on a backend server.
