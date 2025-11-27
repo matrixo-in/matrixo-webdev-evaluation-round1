@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Health & Wellness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="container nav-container">
+            <div class="nav-logo">Health & Wellness</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="summarizer.html">Summarizer</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div id="auth-section"></div>
+        </div>
+    </div>
+    <div class="features">
+        <div class="container">
+            <h2>About Our Health & Wellness Platform</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>AI Health Summarizer</h3>
+                    <p>Our advanced AI technology analyzes complex health information and provides clear, concise summaries tailored to your needs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Easy-to-Read Summaries</h3>
+                    <p>Transform lengthy medical articles, doctor notes, and wellness content into simple, understandable summaries.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Comprehensive Coverage</h3>
+                    <p>Helps with prescriptions, health articles, lifestyle tips, and more. Get insights on nutrition, exercise, and mental wellness.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Accessible & User-Friendly</h3>
+                    <p>Designed with accessibility in mind, our interface is clean, intuitive, and works seamlessly across all devices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+        window.firebase = { initializeApp, getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged };
+    </script>
+    <script src="auth.js"></script>
+</body>
+</html>

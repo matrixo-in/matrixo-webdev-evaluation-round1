@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Health & Wellness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="container nav-container">
+            <div class="nav-logo">Health & Wellness</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="summarizer.html">Summarizer</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="login-container container">
+        <div class="login-card">
+            <h1 style="text-align: center; margin-bottom: 2rem; color: #4CAF50;">Welcome to Health & Wellness</h1>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Sign in with your Google account to access personalized features.</p>
+            <div style="text-align: center;">
+                <button id="login-btn" class="btn login-btn">Login with Google</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+        window.firebase = { initializeApp, getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged };
+    </script>
+    <script>
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                window.location.href = 'index.html';
+            } else {
+                const loginBtn = document.getElementById('login-btn');
+                loginBtn.addEventListener('click', () => {
+                    const provider = new firebase.auth.GoogleAuthProvider();
+                    firebase.auth().signInWithPopup(provider).then(() => {
+                        window.location.href = 'index.html';
+                    }).catch((error) => {
+                        console.error('Login error:', error);
+                        alert('Login failed: ' + error.message);
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="auth.js"></script>
+</body>
+</html>

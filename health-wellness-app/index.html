@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness - Your Smart Health Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="container nav-container">
+            <div class="nav-logo">Health & Wellness</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="summarizer.html">Summarizer</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div id="auth-section"></div>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="container">
+            <h1>Your Smart Health Assistant</h1>
+            <p>Simplify complex health information with our AI-powered text summarizer. Get easy-to-read summaries of articles, doctor notes, and wellness content in seconds.</p>
+            <a href="login.html" class="btn">Get Started</a>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+        window.firebase = { initializeApp, getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged };
+    </script>
+    <script src="auth.js"></script>
+</body>
+</html>
