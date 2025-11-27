@@ -1,122 +1,73 @@
-<div align="center">
-    <img src="https://matrixo.in/logos/logo-dark.png" width="30%" alt="matriXO Logo Dark"/>
-</div>
-<img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Developer Animation"/>
+# Welcome to your Lovable project
 
-# matriXO – Web Development Internship
-## Technical Evaluation Round 1 (Jan 2026)
+## Project info
 
-Welcome to the **Technical Evaluation Round 1** for the **Web Development Intern** role at **matriXO**.
+**URL**: https://lovable.dev/projects/2d18232e-5398-4b02-bf4c-a2b5251b767f
 
-This round is designed to evaluate your **creativity**, **problem-solving ability**, **technical skills**, and your approach to building real-world web applications.  
-You will complete a hands-on challenge and submit your solution via GitHub PR.
+## How can I edit this code?
 
----
+There are several ways of editing your application.
 
-## 📌 Time Duration  
-**1 Hour**
+**Use Lovable**
 
----
+Simply visit the [Lovable Project](https://lovable.dev/projects/2d18232e-5398-4b02-bf4c-a2b5251b767f) and start prompting.
 
-## 🎯 Task  
-Build a **fully functional web application** that solves a **real-world problem** in any domain of your choice, such as:
+Changes made via Lovable will be committed automatically to this repo.
 
-- Student life  
-- Health  
-- Productivity  
-- Education  
-- Finance  
-- Personal growth  
-- Or any other meaningful category  
+**Use your preferred IDE**
 
-Your solution should:  
-✔ Address a specific real-world need  
-✔ Provide a clean, intuitive, engaging UI/UX  
-✔ Use any modern web technologies (React, JS, Node.js, Vite, etc.)  
-✔ Optionally use Vibe Coding tools  
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
----
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-## ✅ Mandatory Requirements  
-Your submission **must** include all of the following:
+Follow these steps:
 
-### **1. README.md (Required Format)**
-Your README must clearly explain your project and follow this exact structure:
-- Name of the domain:
-- The Problem:
-- Target Users:
-- How your solution addresses it:
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-### **2. AI-Powered Feature (At least ONE required)**  
-Examples (you may choose any):  
-- Chatbot  
-- Text summarizer  
-- Language translator  
-- Sentiment analyzer  
-- Smart recommendations  
-- Content generator  
-- Any API/model-powered feature  
+# Step 3: Install the necessary dependencies.
+npm i
 
-### **3. Google Login (Firebase Required)**  
-Your app must implement:  
-- Google Sign-In  
-- Basic authentication flow  
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
 
-### **4. Two Interactive Features (Mandatory)**  
-✔ **Profile Customization**  
-Allow users to modify:  
-- Name  
-- Avatar  
-- Theme  
-- Preferences  
+**Edit a file directly in GitHub**
 
-✔ **Local Language Translation**  
-Support at least **two Indian languages** besides English.  
-Translation must apply to the entire website/app.
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
----
+**Use GitHub Codespaces**
 
-## 📤 Submission Process
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-1. **Fork this repository** to your GitHub account  
-2. **Clone your fork**  
-3. Complete the task inside the project folder  
-4. **Commit & push** your final code to the forked repo  
-5. Create a **Pull Request (PR)** to this main repository  
-6. PR Title Format:  
-FullName_RollNumber
-Example: John Appleseed_26RA1A0000
+## What technologies are used for this project?
 
----
+This project is built with:
 
-## 🏆 Selection Criteria
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-Your submission will be evaluated based on:
+## How can I deploy this project?
 
-- Fully functional web app meeting all mandatory requirements  
-- Completeness & clarity of README.md  
-- Technical quality & code structure  
-- UI/UX design  
-- Creativity of the solution  
-- Responsiveness & usability  
-- Implementation of AI feature & Firebase Login  
+Simply open [Lovable](https://lovable.dev/projects/2d18232e-5398-4b02-bf4c-a2b5251b767f) and click on Share -> Publish.
 
----
+## Can I connect a custom domain to my Lovable project?
 
-## 🚀 Guidelines  
-- You may use any libraries, frameworks, tools, or APIs.  
-- Keep your app simple but polished — avoid unnecessary complexity.  
-- Focus on functionality + clarity over perfection.  
-- Submit before the given deadline.  
+Yes, you can!
 
----
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-## 📧 Need Help?
-For any queries, contact:  
-**hello@matrixo.in**
-
----
-
-### **Good luck, and happy building!**
-### **– Team matriXO**
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
